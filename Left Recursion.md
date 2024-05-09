@@ -1,62 +1,68 @@
-```c
-#include<stdio.h>
-#include<string.h>
+```cpp
+#include <iostream>
+#include <cstring>
 #define SIZE 10
 
-int main () {
+using namespace std;
+
+int main() {
     char non_terminal;
     char beta[SIZE], alpha[SIZE];
     int num;
     char production[10][SIZE];
-    int index=3; /* starting of the string following "->" */
-    printf("Enter the number of Productions: ");
-    scanf("%d",&num);
-    printf("Enter the grammar as E->E-A :\n");
-    for(int i=0;i<num;i++){
-        scanf("%s",production[i]);
+    int index = 3; /* starting of the string following "->" */
+    
+    cout << "Enter the number of Productions: ";
+    cin >> num;
+    cout << "Enter the grammar as E->E-A :\n";
+    
+    for(int i = 0; i < num; i++) {
+        cin >> production[i];
     }
-    for(int i=0;i<num;i++){
-        printf("\nGRAMMAR: %s",production[i]);
-        non_terminal=production[i][0];
-        if(non_terminal==production[i][index]) {
+    
+    for(int i = 0; i < num; i++) {
+        cout << "\nGRAMMAR: " << production[i];
+        non_terminal = production[i][0];
+        
+        if (non_terminal == production[i][index]) {
             int j = 0, k = 0;
             index += 2; // Skip non-terminal and "->"
+            
             while (production[i][index] != '|' && production[i][index] != '\0') {
                 beta[j++] = production[i][index++];
             }
             beta[j] = '\0'; // Null-terminate beta
+            
             if (production[i][index] == '|') {
                 index++; // Skip '|'
+                
                 while (production[i][index] != '\0') {
                     alpha[k++] = production[i][index++];
                 }
             }
             alpha[k] = '\0'; // Null-terminate alpha
-            printf(" is left recursive.\n");
-            printf("Grammar without left recursion:\n");
-            printf("%c->%s%c\'\n", non_terminal, beta, non_terminal);
-            printf("%c\'->%s%c\'|E\n", non_terminal, alpha, non_terminal);
+            
+            cout << " is left recursive.\n";
+            cout << "Grammar without left recursion:\n";
+            cout << non_terminal << "->" << beta << non_terminal << "\'\n";
+            cout << non_terminal << "\'->" << alpha << non_terminal << "\'|E\n";
+        } else {
+            cout << " is not left recursive.\n";
         }
-        else
-            printf(" is not left recursive.\n");
     }
     return 0;
 }
-```
-OUTPUT:
-<br/>
-Enter the number of Productions: 1
-<br/>
+/* OUTPUT:
+Enter the number of Productions: 2
 Enter the grammar as E->E-A :
-<br/>
-E->E+T|T
-<br/>
+A->AaB
+A->ba
 
-GRAMMAR: E->E+T|T is left recursive.
-<br/>
+GRAMMAR: A->AaB is left recursive.
 Grammar without left recursion:
-<br/>
-E->TE'
-<br/>
-E'->TE'|E
-<br/>
+A->BA'
+A'->A'|E
+
+GRAMMAR: A->ba is not left recursive.
+*/
+```
