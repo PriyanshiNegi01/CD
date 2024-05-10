@@ -14,7 +14,7 @@ int main() {
     
     cout << "Enter the number of Productions: ";
     cin >> num;
-    cout << "Enter the grammar as E->E-A :\n";
+    cout << "Enter the grammar as E->E-A:\n";
     
     for(int i = 0; i < num; i++) {
         cin >> production[i];
