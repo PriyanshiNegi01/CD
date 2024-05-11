@@ -1,4 +1,4 @@
-```c
+// Left Factoring the given grammar productions
 #include<stdio.h>
 #include<string.h>
 int main()
@@ -34,14 +34,3 @@ int main()
     printf(" A->%s",modifiedGram);
     printf("\n X->%s\n",newGram);
 }
-```
-OUTPUT:
-<br/>
-Enter Production: A->iEta|iEtAeA|a
-<br/>
-Grammar Without Left Factoring: 
-<br/>
- A->iEtX
-<br/>
- X->a|AeA|a
-<br/>
