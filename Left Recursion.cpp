@@ -1,4 +1,4 @@
-```cpp
+// Eliminating Left Recursion from the given grammar productions
 #include <iostream>
 #include <cstring>
 #define SIZE 10
@@ -52,17 +52,3 @@ int main() {
     }
     return 0;
 }
-/* OUTPUT:
-Enter the number of Productions: 2
-Enter the grammar as E->E-A :
-A->AaB
-A->ba
-
-GRAMMAR: A->AaB is left recursive.
-Grammar without left recursion:
-A->BA'
-A'->A'|E
-
-GRAMMAR: A->ba is not left recursive.
-*/
-```
