@@ -1,4 +1,3 @@
-```cpp
 #include <iostream>
 #include <vector>
 #include <unordered_set>
@@ -68,6 +67,3 @@ int main() {
 
     return 0;
 }
-```
-
-![image](https://github.com/PriyanshiNegi01/CD/assets/121029180/b5fe0f46-eeb6-4e0a-8772-85743bfd3c17)
