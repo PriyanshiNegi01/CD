@@ -17,7 +17,9 @@ Follow
 ![image](https://github.com/PriyanshiNegi01/CD/assets/121029180/63e21fcf-342b-40ba-93f7-6094a99e6caa)
 
 Top Down Predictive Parsing (output given with code)
+
 Leading (output given with code)
+
 Trailing (output given with code)
 
 Syntax Tree
