@@ -1,4 +1,3 @@
-```cpp
 // Program to evaluate an expression tree
 #include <bits/stdc++.h>
 using namespace std;
@@ -67,8 +66,8 @@ int eval(node *root)
 
     return l_val / r_val;
 }
-`
-//driver function to check the above program
+
+// Driver function to check the above program
 int main()
 {
     // create a syntax tree
@@ -84,4 +83,3 @@ int main()
     delete (root);
 
 }
-``` 
