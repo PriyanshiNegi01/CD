@@ -10,7 +10,7 @@ Left Factoring
 
 First
 
-![image](https://github.com/PriyanshiNegi01/CD/assets/121029180/b5fe0f46-eeb6-4e0a-8772-85743bfd3c17)
+![image](https://github.com/PriyanshiNegi01/CD/assets/121029180/02b404ad-cabf-4574-9f07-d64be87bd349)
 
 Follow
 
