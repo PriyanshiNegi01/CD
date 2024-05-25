@@ -1,4 +1,4 @@
-# CD Outputs
+# Program Outputs
 
 Eliminating Left Recursion
 
